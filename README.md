@@ -4,8 +4,9 @@ A modern, stylish, and fully responsive user registration form built with HTML, 
 
 ## 🔥 Live Demo
 
-> *(Optional: add a screenshot or hosted link here)*  
-> ![Form Preview]((https://anhlove.github.io/Form-Validation/))
+👉 [Click here to view the live form](https://anhlove.github.io/Form-Validation/)
+
+> *(Optional: add a screenshot if you like)*  
 
 ---
 
