@@ -5,7 +5,7 @@ A modern, stylish, and fully responsive user registration form built with HTML, 
 ## 🔥 Live Demo
 
 > *(Optional: add a screenshot or hosted link here)*  
-> ![Form Preview]([https://your-image-link.com/form-preview.png](https://anhlove.github.io/Form-Validation/))
+> ![Form Preview]((https://anhlove.github.io/Form-Validation/))
 
 ---
 
