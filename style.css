@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.main {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.form {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.form::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 18px;
+    padding: 1px;
+    background: linear-gradient(135deg, #1dbfaf, #7b61ff);
+    z-index: -1;
+}
+
+.heading {
+    font-size: 2.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.desc {
+    text-align: center;
+    color: #ccc;
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.horizontal {
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.form-label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #eee;
+}
+
+.form-control {
+    height: 42px;
+    padding: 10px 14px;
+    font-size: 1.4rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.form-control:focus {
+    border-color: #1dbfaf;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.form-group.invalid .form-control {
+    border-color: #ff4d4f;
+}
+
+.form-group.invalid .form-message {
+    color: #ff4d4f;
+}
+
+.form-message {
+    font-size: 1.2rem;
+    margin-top: 4px;
+}
+
+.form-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #1dbfaf, #7b61ff);
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-submit:hover {
+    background: linear-gradient(135deg, #17b3a3, #6b4dfb);
+}
+
+.spacer {
+    height: 24px;
+}
+
+/* ======= Tùy chỉnh SELECT & OPTION ========= */
+select.form-control {
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff88' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 36px;
+}
+
+/* Fix hiển thị option bị trắng */
+select.form-control option {
+    background-color: #2c5364;
+    color: #fff;
+}
+
+/* File input tùy chỉnh */
+input[type='file'].form-control {
+    padding: 8px 12px;
+    height: auto;
+    line-height: 1.5;
+}
+
+/* Ảnh preview sau khi chọn */
+.avatar-preview {
+    margin-top: 12px;
+    border-radius: 10px;
+    border: 2px solid #1dbfaf;
+    max-width: 100%;
+    display: block;
+    box-shadow: 0 0 8px rgba(29, 191, 175, 0.3);
+}
+
+/* Responsive form dưới 480px */
+@media (max-width: 480px) {
+    .form {
+        padding: 24px 16px;
+    }
+
+    .heading {
+        font-size: 2.2rem;
+    }
+
+    .form-submit {
+        font-size: 1.4rem;
+        padding: 12px;
+    }
+
+    .form-group.horizontal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
